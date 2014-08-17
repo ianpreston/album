@@ -1,10 +1,10 @@
 ALBUM=bootstrap/run.py
 
-all: build/run.py build/album build/album/__init__.py build/album/compiler.py build/album/errors.py
+all: build/album.py build/album build/album/__init__.py build/album/compiler.py build/album/errors.py
 
-build/run.py: src/run.md
-	$(ALBUM) build src/run.md build/run.py 
-	chmod u+x build/run.py
+build/album.py: src/album.md
+	$(ALBUM) build src/album.md build/album.py 
+	chmod u+x build/album.py
 
 build/album:
 	mkdir build/album || true
